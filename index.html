@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S&W Auto Tracker: We find what you're looking for</title>
+  <title>S&W Vehicle Tracker</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -15,36 +14,22 @@
     .form-wrapper {
       max-width: 540px;
       margin: auto;
-      background: #ffffff;
+      background: #f7f7f7;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-    .logo {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 90px;
-      height: auto;
     }
     h2 {
       text-align: center;
-      color: #002147;
-      margin-bottom: 6px;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 22px;
+      color: #cc0000;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 24px;
     }
     label {
       display: block;
       font-weight: 600;
-      margin-top: 15px;
-      margin-bottom: 5px;
+      margin: 15px 0 5px;
     }
     input, select {
       width: 100%;
@@ -55,22 +40,21 @@
       margin-bottom: 12px;
     }
     .checkbox-container {
-      margin-top: 18px;
-      margin-bottom: 8px;
       display: flex;
       align-items: flex-start;
+      margin-top: 18px;
+      margin-bottom: 8px;
     }
     .checkbox-container input {
       margin-right: 10px;
-      margin-top: 3px;
+      margin-top: 4px;
     }
     .checkbox-container label {
       font-size: 14px;
-      line-height: 1.4;
+      line-height: 1.5;
       font-weight: 400;
     }
     button {
-      margin-top: 10px;
       width: 100%;
       background-color: #003366;
       color: #fff;
@@ -89,153 +73,69 @@
       margin-top: 16px;
       font-size: 14px;
     }
-
     @media (max-width: 600px) {
       .form-wrapper {
         padding: 20px;
-      }
-      .logo {
-        width: 70px;
-        top: 12px;
-        right: 12px;
       }
     }
   </style>
 </head>
 <body>
   <div class="form-wrapper">
-    <img src="S&W_Logo_Transparent_Resized.png" alt="S&W Logo" class="logo" />
-    <h2>S&W Auto Tracker: We find what you're looking for</h2>
-    <div class="subtitle">And once it's in-stock, you'll be the first to know</div>
+    <h2>S&amp;W Vehicle Tracker</h2>
     <form id="alertForm">
       <label for="firstName">First Name</label>
-      <input type="text" id="firstName" required />
+      <input type="text" id="firstName" required>
 
       <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" required />
+      <input type="text" id="lastName" required>
 
       <label for="phoneNumber">Phone Number</label>
-      <input type="tel" id="phoneNumber" required placeholder="+11234567890" />
+      <input type="tel" id="phoneNumber" placeholder="+11234567890" required>
 
       <label for="vehicleYear">Vehicle Year</label>
       <select id="vehicleYear" required>
         <option value="">Select Year</option>
-<option>2025</option>
-<option>2024</option>
-<option>2023</option>
-<option>2022</option>
-<option>2021</option>
-<option>2020</option>
-<option>2019</option>
-<option>2018</option>
-<option>2017</option>
-<option>2016</option>
-<option>2015</option>
-<option>2014</option>
-<option>2013</option>
-<option>2012</option>
-<option>2011</option>
-<option>2010</option>
-<option>2009</option>
-<option>2008</option>
-<option>2007</option>
-<option>2006</option>
-<option>2005</option>
-<option>2004</option>
-<option>2003</option>
-<option>2002</option>
-<option>2001</option>
-<option>2000</option>
-<option>1999</option>
-<option>1998</option>
-<option>1997</option>
-<option>1996</option>
-<option>1995</option>
-<option>1994</option>
-<option>1993</option>
-<option>1992</option>
-<option>1991</option>
-<option>1990</option>
-<option>1989</option>
-<option>1988</option>
-<option>1987</option>
-<option>1986</option>
-<option>1985</option>
-<option>1984</option>
-<option>1983</option>
-<option>1982</option>
-<option>1981</option>
-<option>1980</option>
-<option>1979</option>
-<option>1978</option>
-<option>1977</option>
-<option>1976</option>
-<option>1975</option>
-<option>1974</option>
-<option>1973</option>
-<option>1972</option>
-<option>1971</option>
-<option>1970</option>
-<option>1969</option>
-<option>1968</option>
-<option>1967</option>
-<option>1966</option>
-<option>1965</option>
-<option>1964</option>
-<option>1963</option>
-<option>1962</option>
-<option>1961</option>
-<option>1960</option>
+        <!-- Year options -->
+        <!-- prettier-ignore -->
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const ySel = document.getElementById('vehicleYear');
+            for (let y = 2025; y >= 1960; y--) {
+              ySel.insertAdjacentHTML('beforeend', `<option>${y}</option>`);
+            }
+          });
+        </script>
       </select>
 
       <label for="vehicleMake">Vehicle Make</label>
       <select id="vehicleMake" required>
         <option value="">Select Make</option>
-        <option>Audi</option>
-        <option>BMW</option>
-        <option>Chevrolet</option>
-        <option>Chrysler</option>
-        <option>Dodge</option>
-        <option>Ford</option>
-        <option>GMC</option>
-        <option>Honda</option>
-        <option>Hyundai</option>
-        <option>Kia</option>
-        <option>Lexus</option>
-        <option>Mazda</option>
-        <option>Mercedes-Benz</option>
-        <option>Nissan</option>
-        <option>Subaru</option>
-        <option>Toyota</option>
-        <option>Volkswagen</option>
-        <option>Volvo</option>
+        <option>Audi</option><option>BMW</option><option>Chevrolet</option><option>Chrysler</option>
+        <option>Dodge</option><option>Ford</option><option>GMC</option><option>Honda</option><option>Hyundai</option>
+        <option>Kia</option><option>Mazda</option><option>Mercedes-Benz</option><option>Nissan</option>
+        <option>Subaru</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option>
       </select>
 
       <label for="vehicleModel">Vehicle Model</label>
       <select id="vehicleModel" required>
         <option value="">Select Model</option>
-        <option>Accord</option>
-        <option>Altima</option>
-        <option>Camry</option>
-        <option>Civic</option>
-        <option>Corolla</option>
-        <option>CR-V</option>
-        <option>Escape</option>
-        <option>F-150</option>
-        <option>Focus</option>
-        <option>Malibu</option>
-        <option>RAV4</option>
-        <option>Rogue</option>
-        <option>Sentra</option>
-        <option>Silverado</option>
-        <option>Sonata</option>
-        <option>Tacoma</option>
-        <option>Tucson</option>
+        <!-- Common models -->
+        <option>Accord</option><option>Altima</option><option>Camry</option><option>Civic</option><option>Corolla</option>
+        <option>CR-V</option><option>Escape</option><option>F-150</option><option>Fusion</option><option>Grand Cherokee</option>
+        <option>Highlander</option><option>Malibu</option><option>Model 3</option><option>Model Y</option><option>Outback</option>
+        <option>Pathfinder</option><option>Pilot</option><option>RAV4</option><option>Rogue</option><option>Santa Fe</option>
+        <option>Sentra</option><option>Sierra</option><option>Sienna</option><option>Silverado</option><option>Sonata</option>
+        <option>Sorento</option><option>Suburban</option><option>Tacoma</option><option>Telluride</option><option>Tiguan</option>
+        <option>Tucson</option><option>Tundra</option><option>Wrangler</option><option>Yukon</option>
       </select>
 
       <div class="checkbox-container">
-        <input type="checkbox" id="smsConsent" required />
-        <label for="smsConsent">I agree to receive SMS alerts about inventory updates. Message & data rates may apply. You can unsubscribe at any time.</label>
+        <input type="checkbox" id="smsConsent" required>
+        <label for="smsConsent">
+          I agree to receive SMS alerts about inventory updates.
+          Message &amp; data rates may apply. You can unsubscribe at any time by replying STOP.
+        </label>
       </div>
 
       <button type="submit">Sign Up</button>
@@ -244,3 +144,4 @@
   </div>
 </body>
 </html>
+
