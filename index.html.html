@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S&W Vehicle Tracker</title>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   S&amp;W Vehicle Tracker
+  </title>
   <style>
-    body {
+   body {
       font-family: 'Segoe UI', sans-serif;
       background: #e8e8e8;
       margin: 0;
@@ -79,62 +81,458 @@
       }
     }
   </style>
-</head>
-<body>
+ </head>
+ <body>
   <div class="form-wrapper">
-    <h2>S&amp;W Vehicle Tracker</h2>
-    <form id="alertForm">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" required>
-
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" required>
-
-      <label for="phoneNumber">Phone Number</label>
-      <input type="tel" id="phoneNumber" placeholder="+11234567890" required>
-
-      <label for="vehicleYear">Vehicle Year</label>
-      <select id="vehicleYear" required>
-        <option value="">Select Year</option>
-<option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option><option>1989</option><option>1988</option><option>1987</option><option>1986</option><option>1985</option><option>1984</option><option>1983</option><option>1982</option><option>1981</option><option>1980</option><option>1979</option><option>1978</option><option>1977</option><option>1976</option><option>1975</option><option>1974</option><option>1973</option><option>1972</option><option>1971</option><option>1970</option><option>1969</option><option>1968</option><option>1967</option><option>1966</option><option>1965</option><option>1964</option><option>1963</option><option>1962</option><option>1961</option><option>1960</option>
-      </select>
-
-      <label for="vehicleMake">Vehicle Make</label>
-      <select id="vehicleMake" required>
-        <option value="">Select Make</option>
-        <option>Audi</option><option>BMW</option><option>Chevrolet</option><option>Chrysler</option>
-        <option>Dodge</option><option>Ford</option><option>GMC</option><option>Honda</option><option>Hyundai</option>
-        <option>Kia</option><option>Mazda</option><option>Mercedes-Benz</option><option>Nissan</option>
-        <option>Subaru</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option>
-      </select>
-
-      <label for="vehicleModel">Vehicle Model</label>
-      <select id="vehicleModel" required>
-        <option value="">Select Model</option>
-        <option>Accord</option><option>Altima</option><option>Camry</option><option>Civic</option><option>Corolla</option>
-        <option>CR-V</option><option>Escape</option><option>F-150</option><option>Fusion</option><option>Grand Cherokee</option>
-        <option>Highlander</option><option>Malibu</option><option>Model 3</option><option>Model Y</option><option>Outback</option>
-        <option>Pathfinder</option><option>Pilot</option><option>RAV4</option><option>Rogue</option><option>Santa Fe</option>
-        <option>Sentra</option><option>Sierra</option><option>Sienna</option><option>Silverado</option><option>Sonata</option>
-        <option>Sorento</option><option>Suburban</option><option>Tacoma</option><option>Telluride</option><option>Tiguan</option>
-        <option>Tucson</option><option>Tundra</option><option>Wrangler</option><option>Yukon</option>
-      </select>
-
-      <div class="checkbox-container">
-        <input type="checkbox" id="smsConsent" required>
-        <label for="smsConsent">
-          I agree to receive SMS alerts about inventory updates.
+   <h2>
+    S&amp;W Vehicle Tracker
+   </h2>
+   <form id="alertForm">
+    <label for="firstName">
+     First Name
+    </label>
+    <input id="firstName" required="" type="text"/>
+    <label for="lastName">
+     Last Name
+    </label>
+    <input id="lastName" required="" type="text"/>
+    <label for="phoneNumber">
+     Phone Number
+    </label>
+    <input id="phoneNumber" placeholder="+11234567890" required="" type="tel"/>
+    <label for="vehicleYear">
+     Vehicle Year
+    </label>
+    <select id="vehicleYear" required="">
+     <option value="">
+      Select Year
+     </option>
+     <option>
+      2025
+     </option>
+     <option>
+      2024
+     </option>
+     <option>
+      2023
+     </option>
+     <option>
+      2022
+     </option>
+     <option>
+      2021
+     </option>
+     <option>
+      2020
+     </option>
+     <option>
+      2019
+     </option>
+     <option>
+      2018
+     </option>
+     <option>
+      2017
+     </option>
+     <option>
+      2016
+     </option>
+     <option>
+      2015
+     </option>
+     <option>
+      2014
+     </option>
+     <option>
+      2013
+     </option>
+     <option>
+      2012
+     </option>
+     <option>
+      2011
+     </option>
+     <option>
+      2010
+     </option>
+     <option>
+      2009
+     </option>
+     <option>
+      2008
+     </option>
+     <option>
+      2007
+     </option>
+     <option>
+      2006
+     </option>
+     <option>
+      2005
+     </option>
+     <option>
+      2004
+     </option>
+     <option>
+      2003
+     </option>
+     <option>
+      2002
+     </option>
+     <option>
+      2001
+     </option>
+     <option>
+      2000
+     </option>
+     <option>
+      1999
+     </option>
+     <option>
+      1998
+     </option>
+     <option>
+      1997
+     </option>
+     <option>
+      1996
+     </option>
+     <option>
+      1995
+     </option>
+     <option>
+      1994
+     </option>
+     <option>
+      1993
+     </option>
+     <option>
+      1992
+     </option>
+     <option>
+      1991
+     </option>
+     <option>
+      1990
+     </option>
+     <option>
+      1989
+     </option>
+     <option>
+      1988
+     </option>
+     <option>
+      1987
+     </option>
+     <option>
+      1986
+     </option>
+     <option>
+      1985
+     </option>
+     <option>
+      1984
+     </option>
+     <option>
+      1983
+     </option>
+     <option>
+      1982
+     </option>
+     <option>
+      1981
+     </option>
+     <option>
+      1980
+     </option>
+     <option>
+      1979
+     </option>
+     <option>
+      1978
+     </option>
+     <option>
+      1977
+     </option>
+     <option>
+      1976
+     </option>
+     <option>
+      1975
+     </option>
+     <option>
+      1974
+     </option>
+     <option>
+      1973
+     </option>
+     <option>
+      1972
+     </option>
+     <option>
+      1971
+     </option>
+     <option>
+      1970
+     </option>
+     <option>
+      1969
+     </option>
+     <option>
+      1968
+     </option>
+     <option>
+      1967
+     </option>
+     <option>
+      1966
+     </option>
+     <option>
+      1965
+     </option>
+     <option>
+      1964
+     </option>
+     <option>
+      1963
+     </option>
+     <option>
+      1962
+     </option>
+     <option>
+      1961
+     </option>
+     <option>
+      1960
+     </option>
+    </select>
+    <label for="vehicleMake">
+     Vehicle Make
+    </label>
+    <select id="vehicleMake" required="">
+     <option value="">
+      Select Make
+     </option>
+     <option>
+      Audi
+     </option>
+     <option>
+      BMW
+     </option>
+     <option>
+      Chevrolet
+     </option>
+     <option>
+      Chrysler
+     </option>
+     <option>
+      Dodge
+     </option>
+     <option>
+      Ford
+     </option>
+     <option>
+      GMC
+     </option>
+     <option>
+      Honda
+     </option>
+     <option>
+      Hyundai
+     </option>
+     <option>
+      Kia
+     </option>
+     <option>
+      Mazda
+     </option>
+     <option>
+      Mercedes-Benz
+     </option>
+     <option>
+      Nissan
+     </option>
+     <option>
+      Subaru
+     </option>
+     <option>
+      Tesla
+     </option>
+     <option>
+      Toyota
+     </option>
+     <option>
+      Volkswagen
+     </option>
+     <option>
+      Volvo
+     </option>
+    </select>
+    <label for="vehicleModel">
+     Vehicle Model
+    </label>
+    <select id="vehicleModel" required="">
+     <option value="">
+      Select Model
+     </option>
+     <option>
+      300
+     </option>
+     <option>
+      A4
+     </option>
+     <option>
+      A6
+     </option>
+     <option>
+      Accord
+     </option>
+     <option>
+      Altima
+     </option>
+     <option>
+      C-Class
+     </option>
+     <option>
+      CR-V
+     </option>
+     <option>
+      CX-5
+     </option>
+     <option>
+      Camry
+     </option>
+     <option>
+      Charger
+     </option>
+     <option>
+      Cherokee
+     </option>
+     <option>
+      Civic
+     </option>
+     <option>
+      Corolla
+     </option>
+     <option>
+      Durango
+     </option>
+     <option>
+      ES
+     </option>
+     <option>
+      Elantra
+     </option>
+     <option>
+      Equinox
+     </option>
+     <option>
+      Explorer
+     </option>
+     <option>
+      F-Series
+     </option>
+     <option>
+      Forester
+     </option>
+     <option>
+      GLC
+     </option>
+     <option>
+      GLE
+     </option>
+     <option>
+      Golf
+     </option>
+     <option>
+      Grand Cherokee
+     </option>
+     <option>
+      Highlander
+     </option>
+     <option>
+      IS
+     </option>
+     <option>
+      Jetta
+     </option>
+     <option>
+      Model
+     </option>
+     <option>
+      Model 3
+     </option>
+     <option>
+      Model Y
+     </option>
+     <option>
+      NX
+     </option>
+     <option>
+      Outback
+     </option>
+     <option>
+      Pacifica
+     </option>
+     <option>
+      Passat
+     </option>
+     <option>
+      RAV4
+     </option>
+     <option>
+      RX
+     </option>
+     <option>
+      Rogue
+     </option>
+     <option>
+      Santa Fe
+     </option>
+     <option>
+      Sierra
+     </option>
+     <option>
+      Silverado
+     </option>
+     <option>
+      Soul
+     </option>
+     <option>
+      Tacoma
+     </option>
+     <option>
+      Telluride
+     </option>
+     <option>
+      Tundra
+     </option>
+     <option>
+      Wrangler
+     </option>
+     <option>
+      X3
+     </option>
+     <option>
+      X5
+     </option>
+    </select>
+    <div class="checkbox-container">
+     <input id="smsConsent" required="" type="checkbox"/>
+     <label for="smsConsent">
+      I agree to receive SMS alerts about inventory updates.
           Message &amp; data rates may apply. You can unsubscribe at any time by replying STOP.
-        </label>
-      </div>
-
-      <button type="submit">Sign Up</button>
-      <div class="status" id="formStatus"></div>
-    </form>
+     </label>
+    </div>
+    <button type="submit">
+     Sign Up
+    </button>
+    <div class="status" id="formStatus">
+    </div>
+   </form>
   </div>
-
   <script>
-    document.getElementById('alertForm').addEventListener('submit', async (e) => {
+   document.getElementById('alertForm').addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const firstName = document.getElementById('firstName').value;
@@ -165,5 +563,5 @@
       }
     });
   </script>
-</body>
+ </body>
 </html>
